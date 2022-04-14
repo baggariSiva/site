@@ -1,1 +1,22 @@
-{}
+{
+    "config": {
+        "runTime": "static",
+        "version": "",
+        "framework": "react",
+        "buildCommand": "npm run build",
+        "buildDir": "build",
+        "runCommand": "npm run start"
+    },
+    "ports": [
+        {
+            "port": 3000,
+            "public": true
+        }
+    ],
+    "environments": [
+        {
+            "key": "ENV",
+            "value": "production"
+        }
+    ]
+}
