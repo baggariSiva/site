@@ -6,24 +6,24 @@ config:
     buildDir: 'build'
     runCommand: 'npm run start'
 ports:
-    -  protocol: "HTTP",
-       targetProtocol: "HTTP",
-       listeningPort: "80",
-       targetPort: "3000",
-       public: true,
-       path: "/",
-       isAuth: false,
-       login: "",
-       password: "",
-    -  protocol: "HTTPS",
-       targetProtocol: "HTTP",
-       listeningPort: "443",
-       targetPort: "3000",
-       public: true,
-       path: "/",
-       isAuth: false,
-       login: "",
-       password: "",
+    -  protocol: "HTTP"
+       targetProtocol: "HTTP"
+       listeningPort: "80"
+       targetPort: "3000"
+       public: true
+       path: "/"
+       isAuth: false
+       login: ""
+       password: ""
+    -  protocol: "HTTPS"
+       targetProtocol: "HTTP"
+       listeningPort: "443"
+       targetPort: "3000"
+       public: true
+       path: "/"
+       isAuth: false
+       login: ""
+       password: ""
 environments:
     -  key: 'ENV'
        value: 'production'
