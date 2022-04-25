@@ -1,5 +1,5 @@
 config:
-    runTime: 'static'
+    runTime: 'dockerCompose'
     version: ''
     framework: 'React'
     buildCommand: 'npm run build'
