@@ -1,10 +1,19 @@
-version: "3.8"
 services:
-  app:
-    container_name: SITE
-    image: siteImage
-    restart: always
-    build:
-      context: .
+  openindoor6:
+    # image: openindoor6
+    build: .
+    working_dir: /root/openindoor6
+    command: |
+      yarn run start
+      
     volumes:
-      - /src:/app/src
+    - ./src:/root/openindoor6/src
+    - ./dist:/root/openindoor6/dist
+    - ./webpack.config.js:/root/openindoor6/webpack.config.js
+    - ./package.json:/root/openindoor6/package.json
+    - ./public:/root/openindoor6/public
+    # - ./.babelrc.js:/root/openindoor6/.babelrc.js
+    ports:
+    - 3040:3040
+    - 3044:3044
+    - 4004:4004
